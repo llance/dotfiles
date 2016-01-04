@@ -1,0 +1,7 @@
+echo welcome
+
+alias foo='echo I work with tmux, too'
+
+source $SSHHOME/.sshrc.d/.bashrc 
+source $SSHHOME/.sshrc.d/.vimrc
+tmux source-file $SSHHOME/.sshrc.d/.tmux.conf
