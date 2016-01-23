@@ -29,6 +29,7 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-eunuch' " Adds Unix commands to vim.
 Plug 'tpope/vim-surround' " To change surrounding quote: cs(' ;tag cst<th> ;to add quote ysW'

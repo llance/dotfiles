@@ -55,13 +55,17 @@ plugins=(git z history-substring-search zsh_reload)
 
 # User configuration
 
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/node-v4.2.4-linux-x64/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+
+
 
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+   export LANG=en_US.UTF-8
+   export HISTSIZE=10000
+   export SAVEHIST=10000
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

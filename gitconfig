@@ -1,6 +1,7 @@
 [user]
 	email = Shuixi.Li@ericsson.com
-    name = esxilli
+	name = esxilli
 
 [core]
     editor = vim
+
