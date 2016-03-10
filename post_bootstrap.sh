@@ -1,13 +1,13 @@
 #simlinks
 
-ln -s /home/vagrant/dotfiles/tmux.conf /home/vagrant/.tmux.conf
-ln -s /home/vagrant/dotfiles/config /home/vagrant/.config
-ln -s /home/vagrant/dotfiles/vimrc /home/vagrant/.vimrc
-ln -s /home/vagrant/dotfiles/zshrc /home/vagrant/.zshrc
-ln -s /home/vagrant/dotfiles/bashrc /home/vagrant/.bashrc
-ln -s /home/vagrant/dotfiles/gitconfig /home/vagrant/.gitconfig
-ln -s /home/vagrant/dotfiles/sshrc /home/vagrant/.sshrc
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/config ~/.config
+ln -s ~/dotfiles/vimrc ~/.vimrc
+ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/bashrc ~/.bashrc
+ln -s ~/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/dotfiles/sshrc ~/.sshrc
 
-ln -s /home/vagrant/dotfiles/tmux.conf /home/vagrant/.sshrc.d/.tmux.conf
-#ln -s /home/vagrant/dotfiles/vimrc /home/vagrant/.sshrc.d/.vimrc
-ln -s /home/vagrant/dotfiles/bashrc /home/vagrant/.sshrc.d/.bashrc
+ln -s ~/dotfiles/tmux.conf ~/.sshrc.d/.tmux.conf
+#ln -s ~/dotfiles/vimrc ~/.sshrc.d/.vimrc
+ln -s ~/dotfiles/bashrc ~/.sshrc.d/.bashrc
