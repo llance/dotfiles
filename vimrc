@@ -1,3 +1,9 @@
+" run pathogen
+execute pathogen#infect()
+
+" runtimepath for ctrlp.vim
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " To make a portable tar vim:
 " bash <(curl -L https://raw.githubusercontent.com/junegunn/myvim/master/myvim)
 
@@ -22,6 +28,7 @@ set bs=2
 call plug#begin('~/.vim/plugged')
 
 " Essential
+Plug 'fatih/vim-go', { 'for': 'go'}
 Plug 'morhetz/gruvbox'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
@@ -78,6 +85,7 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Color scheme.
+syntax enable
 set background=dark
 colorscheme solarized 
 
@@ -229,6 +237,27 @@ let g:syntastic_cpp_include_dirs = ['include', '../include']
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_c_include_dirs = ['include', '../include']
 let g:syntastic_c_compiler = 'clang'
+
+" Go
+" " ----------
+" autocmd FileType go nmap <leader>r <Plug>(go-run)
+" autocmd FileType go nmap <leader>i <Plug>(go-info)
+" autocmd FileType go nmap <leader>re <Plug>(go-rename)
+" autocmd FileType go nmap <leader>ref <Plug>(go-referrers)
+" autocmd FileType go nmap <leader>b <Plug>(go-build)
+" autocmd FileType go nmap <leader>t <Plug>(go-test)
+" autocmd FileType go nmap <leader>c <Plug>(go-coverage)
+" autocmd FileType go nmap <leader>d <Plug>(go-def)
+" autocmd FileType go nmap <leader>de <Plug>(go-describe)
+" autocmd FileType go nmap K <Plug>(go-doc)
+" let g:go_highlight_functions = 1
+" let g:go_highlight_methods = 1
+" let g:go_highlight_structs = 1
+" let g:go_highlight_operators = 1
+" " let g:go_highlight_build_constraints = 1
+" let g:go_fmt_command = "goimports"
+" let g:go_snippet_engine = "neosnippet"
+" autocmd BufLeave *.go             normal! mG
 
 " vim
 " ---
@@ -388,11 +417,32 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .git
-      \ --ignore .svn
-      \ --ignore .hg
-      \ --ignore .DS_Store
-      \ --ignore "**/*.pyc"
-      \ -g ""'
+            \ --ignore .svn
+                  \ --ignore .hg
+                        \ --ignore .DS_Store
+                              \ --ignore "**/*.pyc"
+                                    \ -g ""'
 " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
 " ------------------------------------------------------------------------ }}}
+
+"  Go
+"
+"  " ----------
+  autocmd FileType go nmap <leader>r <Plug>(go-run)
+  autocmd FileType go nmap <leader>i <Plug>(go-info)
+  autocmd FileType go nmap <leader>re <Plug>(go-rename)
+  autocmd FileType go nmap <leader>ref <Plug>(go-referrers)
+  autocmd FileType go nmap <leader>b <Plug>(go-build)
+  autocmd FileType go nmap <leader>t <Plug>(go-test)
+  autocmd FileType go nmap <leader>c <Plug>(go-coverage)
+  autocmd FileType go nmap <leader>d <Plug>(go-def)
+  autocmd FileType go nmap <leader>de <Plug>(go-describe)
+  autocmd FileType go nmap K <Plug>(go-doc)
+  let g:go_highlight_functions = 1
+  let g:go_highlight_methods = 1
+  let g:go_highlight_structs = 1
+  let g:go_highlight_operators = 1
+  " let g:go_highlight_build_constraints = 1
+  let g:go_fmt_command = "goimports"
+  let g:go_snippet_engine = "neosnippet"
+  autocmd BufLeave *.go             normal! mG
