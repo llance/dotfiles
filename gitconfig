@@ -6,3 +6,5 @@
 [core]
     editor = vim
 
+[url "https://"]
+	insteadOf = git://

@@ -1,0 +1,8 @@
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias l='ls -lah'
+alias la='ls -larth'
+alias ll='ls -lh'
+alias ls='ls --color=auto'
+alias lsa='ls -lah'
