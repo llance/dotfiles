@@ -8,3 +8,9 @@
 
 [url "https://"]
 	insteadOf = git://
+[http]
+	sslCAinfo = /etc/ssl/certs/ca-certificates.crt
+	sslVerify = false
+[credential]
+[url "git://"]
+	insteadOf = https://

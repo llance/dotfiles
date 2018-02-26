@@ -136,3 +136,6 @@ export NLS_LANG=`$ORACLE_HOME/bin/nls_lang.sh`
 export ORACLE_BASE=/u01/app/oracle
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
 export PATH=$ORACLE_HOME/bin:$PATH
+
+#LS_COLORS=$LS_COLORS:'di=0;36;105:' ; export LS_COLORS
+
