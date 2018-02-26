@@ -63,13 +63,10 @@ syntax on
 if has('gui_running')
 	  set background=dark
 	    colorscheme solarized
-    else
-	      colorscheme zenburn
       endif
 
 "toggle between dark and light theme for solarized     
-call togglebg#map("")
-call togglebg#map("<F5>")
+"call togglebg#map("<F5>")
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
