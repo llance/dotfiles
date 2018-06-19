@@ -2,6 +2,10 @@ set nocompatible              " required
 filetype off                  " required
 
 
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -77,6 +81,7 @@ set nu "Turn on line numbers on the side of the screen
 " list all plugins that you'd like to install here
 Plugin 'kien/ctrlp.vim' " fuzzy find files
 Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'benmills/vimux'
 Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
@@ -89,6 +94,13 @@ Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+
+nnoremap <leader>. :CtrlPTag<cr>
+
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+
 
 call vundle#end()
 filetype plugin indent on
