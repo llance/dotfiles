@@ -2,6 +2,10 @@ set nocompatible              " required
 filetype off                  " required
 
 
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -34,16 +38,17 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 | 
-    \ set expandtab | 
+    \ set textwidth=79 |
+    \ set expandtab |
     \ set autoindent |
-    \ set fileformat=unix
+    \ set fileformat=unix |
 
 
 au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2|
-    \ set softtabstop=2|
-    \ set shiftwidth=2
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+
 
 " Flagging Unnecessary Whitespace
 highlight BadWhitespace ctermbg=red guibg=darkred
@@ -74,9 +79,9 @@ else
 	let g:solarized_termcolors=256
 	colorscheme zenburn
 
-endif	
+endif
 
-"toggle between dark and light theme for solarized     
+"toggle between dark and light theme for solarized
 "call togglebg#map("<F5>")
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
@@ -86,6 +91,7 @@ set nu "Turn on line numbers on the side of the screen
 " list all plugins that you'd like to install here
 Plugin 'kien/ctrlp.vim' " fuzzy find files
 Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'benmills/vimux'
 Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
@@ -99,6 +105,12 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'dracula/vim'
+Plugin 'rking/ag.vim'
+
+nnoremap <leader>. :CtrlPTag<cr>
+
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
 
 call vundle#end()
 filetype plugin indent on

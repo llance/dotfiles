@@ -11,3 +11,5 @@ ln -s /vagrant/dotfile/sshrc ~/.sshrc
 ln -s /vagrant/dotfile/tmux.conf ~/.sshrc.d/.tmux.conf
 #ln -s /vagrant/dotfile/vimrc ~/.sshrc.d/.vimrc
 ln -s /vagrant/dotfile/bashrc ~/.sshrc.d/.bashrc
+
+alias ctags="`brew --prefix`/bin/ctags"
