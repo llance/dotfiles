@@ -1,10 +1,12 @@
-#set default user
-DEFAULT_USER=`whoami`
-
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/lanceli/.oh-my-zsh
-
-export PATH="/usr/local/sbin:/usr/local/bin/python:/usr/local/bin/python-config:/Applications/VirtualBox.app/Contents/MacOS:/usr/local/bin:/Applications/SWI-Prolog.app/Contents/MacOS:/Users/lanceli/bin:/usr/local/heroku/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/gradle/gradle-2.4/bin::/usr/local/apache-maven/apache-maven-3.3.3/bin:/Users/lanceli/go/bin:/usr/local/opt/go/libexec/bin:/usr/local/sbin:/usr/local/bin/python:/usr/local/bin/python-config:/Applications/VirtualBox.app/Contents/MacOS:/usr/local/bin:/Applications/SWI-Prolog.app/Contents/MacOS:/Users/lanceli/bin:/usr/local/heroku/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/gradle/gradle-2.4/bin::/usr/local/apache-maven/apache-maven-3.3.3/bin:/Users/lanceli/go/bin:/usr/local/opt/go/libexec/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/go/bin:/usr/texbin"
+fpath=(/usr/local/share/zsh-completions $fpath)
+export PATH="/usr/local/sbin:/usr/local/bin/python:/usr/local/bin/python-config:/Applications/VirtualBox.app/Contents/MacOS:/usr/local/bin:/Applications/SWI-Prolog.app/Contents/MacOS:/Users/lanceli/bin:/usr/local/heroku/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/gradle/gradle-2.4/bin::/usr/local/apache-maven/apache-maven-3.3.3/bin:/Users/lanceli/go/bin:/usr/local/opt/go/libexec/bin:/usr/local/sbin:/usr/local/bin/python:/usr/local/bin/python-config:/Applications/VirtualBox.app/Contents/MacOS:/usr/local/bin:/Applications/SWI-Prolog.app/Contents/MacOS:/Users/lanceli/bin:/usr/local/heroku/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/gradle/gradle-2.4/bin::/usr/local/apache-maven/apache-maven-3.3.3/bin:/Users/lanceli/go/bin:/usr/local/opt/go/libexec/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/go/bin:/usr/texbin:$PATH"
+export GOPATH=$HOME/git/csgo
+export PATH=$PATH:$GOPATH/bin
+export MONGO_PATH=/usr/local/mongodb
+export PATH=$PATH:$MONGO_PATH/bin 
+export PATH=$PATH:~/Library/Python/3.4/bin
 PATH="$(echo $PATH | perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, scalar <>))')"
 #bindkey for dirhistory
 #alt-arrow_right
@@ -16,7 +18,8 @@ PATH="$(echo $PATH | perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -69,7 +72,7 @@ plugins=(git brew web-search z history-substring-search tmux tmuxinator sublime 
 source $ZSH/oh-my-zsh.sh
 
 #activate z.sh
-#. /usr/local/bin/z.sh
+. /bin/zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -115,8 +118,11 @@ alias la='ls -lA'
 alias ls='ls -G'
 alias sbp='source ~/.bash_profile'
 
+#change prompt to only display my name
+#export DEFAULT_USER=`whoami`
+
 #source font-awesome fonts https://github.com/gabrielelana/awesome-terminal-fonts
-#source ~/.font/*.sh
+source ~/.fonts/*.sh
 
 #powerlevel9k theme rjorgenson's configuration:
 POWERLEVEL9K_MODE='awesome-patched'
@@ -175,5 +181,4 @@ POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S} \UE12E"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('status' 'os_icon' 'todo' 'context' 'dir' 'vcs')
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=('nvm' 'rvm' 'load' 'ram_joined' 'battery' 'time')
 
-DEFAULT_USER="lance@MBP"
-
+source ~/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme
