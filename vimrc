@@ -95,6 +95,7 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'rking/ag.vim'
+Plugin 'fatih/vim-go' "vim plugin for golang
 
 nnoremap <leader>. :CtrlPTag<cr>
 
