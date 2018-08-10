@@ -1,6 +1,3 @@
-ECHO "sourcing .bash_profile"
-source ~/.bash_profile
+ECHO "sourcing .zshrc"
+source ~/.zshrc
 
-zsh
-echo . /bin/zsh
-. /bin/zsh
