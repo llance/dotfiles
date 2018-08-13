@@ -58,15 +58,18 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew web-search z history-substring-search tmux tmuxinator sublime colorize zsh-syntax-highlighting alias-tips zsh-256color)
+plugins=(git brew web-search z history-substring-search tmux tmuxinator sublime colorize zsh-syntax-highlighting alias-tips zsh-256color node pip python)
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+
 
 source $ZSH/oh-my-zsh.sh
 
