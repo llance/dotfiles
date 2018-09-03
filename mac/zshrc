@@ -9,6 +9,9 @@ PATH="$(echo $PATH | perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/
 
 alias python='python3'
 alias python2='/usr/bin/python'
+alias pip='/usr/local/bin/pip3'
+alias pip2='/usr/local/bin/pip'
+
 
 #bindkey for dirhistory
 #alt-arrow_right

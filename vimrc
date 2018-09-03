@@ -1,6 +1,9 @@
 set nocompatible              " required
 filetype off                  " required
 
+" press F9 to execute python script within vim
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
