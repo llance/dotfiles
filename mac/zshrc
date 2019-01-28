@@ -7,6 +7,10 @@ export ZSH=/Users/$DEFAULT_USER/.oh-my-zsh
 export PATH="/usr/local/sbin:/usr/local/bin/python:/usr/local/bin/python-config:/Applications/VirtualBox.app/Contents/MacOS:/usr/local/bin:/Applications/SWI-Prolog.app/Contents/MacOS:/Users/lanceli/bin:/usr/local/heroku/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/gradle/gradle-2.4/bin::/usr/local/apache-maven/apache-maven-3.3.3/bin:/Users/lanceli/go/bin:/usr/local/opt/go/libexec/bin:/usr/local/sbin:/usr/local/bin/python:/usr/local/bin/python-config:/Applications/VirtualBox.app/Contents/MacOS:/usr/local/bin:/Applications/SWI-Prolog.app/Contents/MacOS:/Users/lanceli/bin:/usr/local/heroku/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/gradle/gradle-2.4/bin::/usr/local/apache-maven/apache-maven-3.3.3/bin:/Users/lanceli/go/bin:/usr/local/opt/go/libexec/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/go/bin:/usr/texbin"
 PATH="$(echo $PATH | perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, scalar <>))')"
 
+#airflow related environment variable
+export SLUGIFY_USES_TEXT_UNIDECODE=yes
+export AIRFLOW_HOME=~/airflow
+
 alias python='python3'
 alias python2='/usr/bin/python'
 alias pip='/usr/local/bin/pip3'
