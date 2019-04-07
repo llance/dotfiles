@@ -1,9 +1,6 @@
 set nocompatible              " required
 filetype off                  " required
 
-" press F9 to execute python script within vim
-nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
-
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
@@ -38,13 +35,13 @@ set foldlevel=99
 nnoremap <space> za
 
 au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix |
+    \ set tabstop=4 | 
+    \ set softtabstop=4 | 
+    \ set shiftwidth=4 | 
+    \ set textwidth=79 | 
+    \ set expandtab | 
+    \ set autoindent | 
+    \ set fileformat=unix | 
 
 
 au BufNewFile,BufRead *.js,*.html,*.css
@@ -67,24 +64,14 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
 let python_highlight_all=1
-
 syntax on
 
-syntax enable
-
 if has('gui_running')
-	echo "gui_running = True"
-	set background=light
-	colorscheme zenburn
-else
-	"echo "gui_running = False"
-	set background=dark
-	let g:solarized_termcolors=256
-	colorscheme zenburn
+	  set background=dark
+	    colorscheme solarized
+      endif
 
-endif
-
-"toggle between dark and light theme for solarized
+"toggle between dark and light theme for solarized     
 "call togglebg#map("<F5>")
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
@@ -107,13 +94,13 @@ Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'dracula/vim'
 Plugin 'rking/ag.vim'
 Plugin 'fatih/vim-go' "vim plugin for golang
 
 nnoremap <leader>. :CtrlPTag<cr>
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
 
 
 call vundle#end()
