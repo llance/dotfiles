@@ -1,22 +1,24 @@
-export LC_ALL=en_US.UTF-8 
+export LC_ALL=en_US.UTF-8
 
 export LANG=en_US.UTF-8
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/vagrant/.oh-my-zsh
 
-#set theme to solarized on load up  
+#set theme to solarized on load up
 source ~/git/mintty-colors-solarized/mintty-solarized-dark.sh
 
 #activate dircolors-solarized
 eval dircolors ~/.dircolors/dircolors-solarized
-  
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
 
+export SLUGIFY_USES_TEXT_UNIDECODE=yes
+export AIRFLOW_HOME=~/airflow
 
 #mount node_modules folder because it only exist in unix env and doesn't get
 #synced to windows env
@@ -66,11 +68,12 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z history-substring-search zsh_reload)
+plugins=(virtualenv git brew web-search z history-substring-search tmux tmuxinator sublime colorize zsh-syntax-highlighting zsh-256color node pip python)
+#plugins=(git z history-substring-search zsh_reload)
 
 # User configuration
 
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/node-v4.2.4-linux-x64/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/node-v4.2.4-linux-x64/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 
@@ -109,6 +112,8 @@ if [ -f ~/.bashhub/bashhub.zsh ]; then
     source ~/.bashhub/bashhub.zsh
 fi
 
+
+alias python=python3.6
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
@@ -130,12 +135,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
+#export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
 export ORACLE_SID=XE
-export NLS_LANG=`$ORACLE_HOME/bin/nls_lang.sh`
-export ORACLE_BASE=/u01/app/oracle
+#export NLS_LANG=`$ORACLE_HOME/bin/nls_lang.sh`
+#export ORACLE_BASE=/u01/app/oracle
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
 export PATH=$ORACLE_HOME/bin:$PATH
 
 #LS_COLORS=$LS_COLORS:'di=0;36;105:' ; export LS_COLORS
 
+source ~/.solarized/mintty-solarized-dark.sh

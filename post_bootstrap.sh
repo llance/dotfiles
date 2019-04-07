@@ -13,3 +13,5 @@ ln -s /vagrant/dotfile/tmux.conf ~/.sshrc.d/.tmux.conf
 ln -s /vagrant/dotfile/bashrc ~/.sshrc.d/.bashrc
 
 alias ctags="`brew --prefix`/bin/ctags"
+
+ sudo ln -s /usr/bin/pip3 /usr/bin/pip

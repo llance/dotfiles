@@ -75,12 +75,12 @@ syntax enable
 if has('gui_running')
 	echo "gui_running = True"
 	set background=light
-	colorscheme zenburn
+	colorscheme solarized
 else
 	"echo "gui_running = False"
 	set background=dark
 	let g:solarized_termcolors=256
-	colorscheme zenburn
+	colorscheme solarized
 
 endif
 
@@ -110,10 +110,24 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'dracula/vim'
 Plugin 'rking/ag.vim'
 Plugin 'fatih/vim-go' "vim plugin for golang
+Plugin 'davidhalter/jedi-vim'
 
 nnoremap <leader>. :CtrlPTag<cr>
 
+
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = "<leader>]"
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
+
+
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+"make backspace work in insert mode
+set backspace=indent,eol,start
 
 
 call vundle#end()
