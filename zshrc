@@ -18,7 +18,7 @@ eval dircolors ~/.dircolors/dircolors-solarized
 ZSH_THEME="agnoster"
 
 export SLUGIFY_USES_TEXT_UNIDECODE=yes
-export AIRFLOW_HOME=~/airflow
+export AIRFLOW_HOME=/home/vagrant/airflow
 
 #mount node_modules folder because it only exist in unix env and doesn't get
 #synced to windows env
@@ -135,7 +135,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
+export ORACLE_HOME=/home/vagrant/instantclient_11_2
 export ORACLE_SID=XE
 #export NLS_LANG=`$ORACLE_HOME/bin/nls_lang.sh`
 #export ORACLE_BASE=/u01/app/oracle
