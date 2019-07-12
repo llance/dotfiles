@@ -27,7 +27,7 @@ alias pip2='/usr/local/bin/pip'
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -188,7 +188,16 @@ POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S} \UE12E"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('status' 'os_icon' 'todo' 'dir' 'vcs')
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=('nvm' 'rvm' 'load' 'ram_joined' 'battery' 'status' 'virtualenv')
 
-DEFAULT_USER="lance@MBP"
+DEFAULT_USER="lsx@MBP"
 
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+
+export DEV_BOOTSTRAP_GIT_URL=git@github.com:Shopify/dev.git
+
+[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+export PATH="/usr/local/opt/ruby@2.4/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
